@@ -18,4 +18,5 @@
 ;; Auto-follow symlinks to files under version control
 (setq vc-follow-symlinks t)
 
+(global-set-key (kbd "C-c f r") 'rename-visited-file)
 (provide 'bono-core-fm)
