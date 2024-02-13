@@ -87,4 +87,8 @@
                   (interactive)
                   (join-line -1)))
 
+;; When duplicating line/region, move the point to the first line of the duplicate line/region
+(setq duplicate-line-final-position 1)
+(global-set-key (kbd "M-<down>") #'duplicate-dwim)
+
 (provide 'bono-core-editor)
