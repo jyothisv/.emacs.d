@@ -5,7 +5,9 @@
               )
 
 
-(delete-selection-mode 1)               ; When pasting, delete the active region.
+;; When pasting, delete the active region, but only for mouse/shift selections
+(setq delete-selection-temporary-region 'selection)
+(delete-selection-mode 1)
 ;; I don't want to type yes/no
 (fset 'yes-or-no-p 'y-or-n-p)                                    ;From MasteringEmacs
 (global-subword-mode 1)
