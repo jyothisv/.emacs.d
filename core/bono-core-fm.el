@@ -19,4 +19,7 @@
 (setq vc-follow-symlinks t)
 
 (global-set-key (kbd "C-c f r") 'rename-visited-file)
+
+(setq switch-to-prev-buffer-skip-regexp "\\*")
+
 (provide 'bono-core-fm)
