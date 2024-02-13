@@ -11,7 +11,7 @@
 (setq native-comp-async-report-warnings-errors nil)
 
 ;; Set the directory for natively-compiled files
-;; (setcar native-comp-eln-load-path (expand-file-name "cache/eln-cache" user-emacs-directory))
+(startup-redirect-eln-cache (expand-file-name "cache/eln-cache" user-emacs-directory))
 
 (defvar default-file-name-handler-alist file-name-handler-alist)
 (setq file-name-handler-alist nil)
