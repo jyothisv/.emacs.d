@@ -93,4 +93,12 @@
 (setq duplicate-line-final-position 1)
 (global-set-key (kbd "M-<down>") #'duplicate-dwim)
 
+
+;; Mouse settings
+;; Allow dragging and dropping text to other programs
+(setq mouse-drag-and-drop-region-cross-program t)
+;; When using mouse to select text, automatically scroll when needed
+(setq mouse-drag-and-drop-region-scroll-margin t)
+
 (provide 'bono-core-editor)
+
