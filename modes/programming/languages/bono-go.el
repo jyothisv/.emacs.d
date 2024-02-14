@@ -4,7 +4,6 @@
   :straight nil
   :config
   (add-hook 'go-ts-mode-hook 'eglot-ensure)
-  (add-hook 'before-save-hook 'eglot-format-buffer)
   )
 
 

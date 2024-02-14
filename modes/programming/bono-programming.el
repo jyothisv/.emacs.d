@@ -10,6 +10,7 @@
   (add-to-list 'eglot-server-programs
                '(rust-ts-mode . ("rust-analyzer"
                                  :initializationOptions (:check (:command "clippy")))))
+  (add-hook 'before-save-hook 'eglot-format-buffer nil t)
   :bind (:map eglot-mode-map
               ("C-c l a" . eglot-code-actions)
               ("C-c l r" . eglot-rename)
