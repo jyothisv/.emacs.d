@@ -56,4 +56,25 @@ Borrowed from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/"
   (vim-open-line-below (- arg)))
 
 
+(defun create-directory-if-needed ()
+  "Creates the directory of the current file if it doesn't exist already"
+  (when buffer-file-name                ;if this buffer is associated with a file
+    (let ((dir default-directory))      ;we use dir for potential future modification
+      (if (not (file-exists-p dir))
+          (make-directory dir t)))))
+
+
+(defun gosmacs-transpose-chars (n)
+  "Always tranpose chars before point.
+With a numeric argument n, transpose the characters at `(point) - n - 1' and `(point) - n'.
+Does not move the point."
+  (interactive "*p")
+  (let ((pt (point)))
+    (unwind-protect
+        (when (> (- pt n) (point-min))
+          (forward-char (- n))
+          (transpose-chars 1))
+      (goto-char pt))))
+
+
 (provide 'bono-core-utils)
