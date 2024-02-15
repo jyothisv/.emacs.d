@@ -5,8 +5,7 @@
               )
 
 
-;; When pasting, delete the active region, but only for mouse/shift selections
-(setq delete-selection-temporary-region 'selection)
+;; When pasting, delete the active region
 (delete-selection-mode 1)
 ;; I don't want to type yes/no
 (fset 'yes-or-no-p 'y-or-n-p)                                    ;From MasteringEmacs
@@ -101,4 +100,3 @@
 (setq mouse-drag-and-drop-region-scroll-margin t)
 
 (provide 'bono-core-editor)
-
