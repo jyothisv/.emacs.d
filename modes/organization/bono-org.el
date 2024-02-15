@@ -12,6 +12,8 @@
   )
 
 (use-package org-modern
+  :custom
+  (org-modern-hide-stars " ")           ;Hide the leading stars
   :config
   (add-hook 'org-mode-hook #'org-modern-mode) )
 
