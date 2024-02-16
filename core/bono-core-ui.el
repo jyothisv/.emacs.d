@@ -20,6 +20,19 @@
 ;; (setq tab-bar-new-tab-choice 'window)
 (setq tab-bar-new-tab-to 'rightmost)
 
+;; C-c <left>/<right> for cycling through tab bars
+(tab-bar-history-mode +1)
+
+;; Keys for tab navigation
+(global-set-key (kbd "M-<escape>") #'tab-recent)
+(global-set-key (kbd "M-<f1>") #'(lambda () (interactive) (tab-select 1)))
+(global-set-key (kbd "M-<f2>") #'(lambda () (interactive) (tab-select 2)))
+(global-set-key (kbd "M-<f3>") #'(lambda () (interactive) (tab-select 3)))
+(global-set-key (kbd "M-<f4>") #'(lambda () (interactive) (tab-select 4)))
+(global-set-key (kbd "M-<f5>") #'(lambda () (interactive) (tab-select 5)))
+
+
+
 (pixel-scroll-precision-mode)
 
 ;; Setting font(s)
