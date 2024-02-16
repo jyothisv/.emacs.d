@@ -27,6 +27,10 @@
   "Return the abolute path of NAME under the bono configuration cache directory."
   (expand-file-name name bono-cache-dir))
 
+
+;; repeat mode
+(repeat-mode +1)
+
 ;; Set the load path and load core modules
 (add-to-list 'load-path bono-core-dir)
 
