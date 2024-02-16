@@ -67,4 +67,8 @@
   (setq doom-modeline-major-mode-icon nil)
   (setq doom-modeline-buffer-modification-icon nil))
 
+
+;; Help window navigation should stay in the help window
+(setq help-window-keep-selected t)
+
 (provide 'bono-core-ui)
