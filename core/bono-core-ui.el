@@ -85,4 +85,6 @@
 
 (global-set-key (kbd "C-x k") #'kill-buffer-close-window)
 
+(global-set-key (kbd "M-o") #'other-window)
+
 (provide 'bono-core-ui)
