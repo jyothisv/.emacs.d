@@ -121,10 +121,13 @@
 
 ;; C-x C-x without activating the region
 (defun exchange-point-and-mark-no-activate ()
-  "Identical to \\[exchange-point-and-mark] but will not activate the region."
+  "Identical to \\[exchange-point-and-mark] but activates the region iff the region was active before."
   (interactive)
-  (exchange-point-and-mark)
-  (deactivate-mark nil))
+  (let ((active-region mark-active))
+    (exchange-point-and-mark)
+    (unless active-region
+      (deactivate-mark nil))))
+
 
 (define-key global-map [remap exchange-point-and-mark] 'exchange-point-and-mark-no-activate)
 
