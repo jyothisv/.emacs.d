@@ -71,4 +71,18 @@
 ;; Help window navigation should stay in the help window
 (setq help-window-keep-selected t)
 
+(defun kill-buffer-close-window ()
+  "Kill the current buffer and close its window."
+  (interactive)
+  (if (> (length (window-list)) 1)
+      (kill-buffer-and-window)
+    (kill-buffer (current-buffer))))
+
+
+;; Don't ask confirmation before killing a buffer associated with a process
+(setq kill-buffer-query-functions
+      (remq 'process-kill-buffer-query-function kill-buffer-query-functions))
+
+(global-set-key (kbd "C-x k") #'kill-buffer-close-window)
+
 (provide 'bono-core-ui)

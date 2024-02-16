@@ -99,11 +99,4 @@
 ;; When using mouse to select text, automatically scroll when needed
 (setq mouse-drag-and-drop-region-scroll-margin t)
 
-
-;; Don't ask confirmation before killing a buffer associated with a process
-(setq kill-buffer-query-functions
-      (remq 'process-kill-buffer-query-function kill-buffer-query-functions))
-
-(global-set-key (kbd "C-x k") #'kill-buffer-and-window)
-
 (provide 'bono-core-editor)
