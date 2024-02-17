@@ -51,7 +51,16 @@
 
 ;; Scroll the compilation output until the first error is encountered
 (setq compilation-scroll-output 'first-error)
+(setq compilation-auto-jump-to-first-error 'if-location-known)
 
+;; Compile command
+(setq compile-command "")
+
+(global-set-key (kbd "C-<f9>") 'compile)
+(global-set-key (kbd "<f9>") 'recompile)
+
+;; TODO: Enable conflict-free recompilation in different directories
+;; (make-variable-buffer-local 'compilation-directory)
 
 (use-package flymake
   :config
