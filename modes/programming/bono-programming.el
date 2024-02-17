@@ -29,6 +29,9 @@
 ;; Parens
 (show-paren-mode 1)
 
+;; Show some context when the matching delimiter is off screen
+(setq show-paren-context-when-offscreen t)
+
 ;; Electric pair mode
 (electric-pair-mode 1)
 
@@ -36,6 +39,7 @@
 (use-package rainbow-delimiters
   :config
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
 
 ;; comments
 (use-package comment-dwim-2
