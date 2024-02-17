@@ -4,7 +4,6 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (use-package eglot
-  :straight nil
   :config
   (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   (add-to-list 'eglot-server-programs
@@ -21,7 +20,6 @@
 
 ;; eldoc
 (use-package eldoc
-  :straight nil
   :diminish eldoc-mode
   :config
   (setq eldoc-echo-area-use-multiline-p nil) ;Display only 1 line in the echo area
