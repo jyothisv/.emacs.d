@@ -54,10 +54,10 @@
 
 
 (use-package flymake
-  :straight nil
   :config
-  (define-key flymake-mode-map (kbd "M-g M-n") 'flymake-goto-next-error)
-  (define-key flymake-mode-map (kbd "M-g M-p") 'flymake-goto-prev-error)
+  (define-key flymake-mode-map (kbd "M-g n") 'flymake-goto-next-error)
+  (define-key flymake-mode-map (kbd "M-g p") 'flymake-goto-prev-error)
+  (setq flymake-mode-line-lighter "")   ;Do not show anything in the mode-line
   :hook
   (prog-mode . flymake-mode)
   )
