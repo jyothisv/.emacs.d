@@ -3,13 +3,17 @@
 ;; line numbers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
+;; From https://gist.github.com/carlosrogue/777f43b4a46400cae21aaf9ba5ca5ccc
+;; -10 to place this before eglot's willSave notification
+(defun eglot-format-buffer-on-save ()
+  (add-hook 'before-save-hook #'eglot-format-buffer -10 t))
+
 (use-package eglot
   :config
   (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   (add-to-list 'eglot-server-programs
                '(rust-ts-mode . ("rust-analyzer"
                                  :initializationOptions (:check (:command "clippy")))))
-  (add-hook 'before-save-hook 'eglot-format-buffer nil t)
   :bind (:map eglot-mode-map
               ("C-c l a" . eglot-code-actions)
               ("C-c l r" . eglot-rename)
