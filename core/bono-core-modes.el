@@ -32,4 +32,6 @@
 (require 'bono-rust)
 (require 'bono-yaml)
 
+(require 'bono-processes)
+
 (provide 'bono-core-modes)
