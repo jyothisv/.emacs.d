@@ -17,7 +17,7 @@
   :config
   (setq history-length 10000)
   (setq history-delete-duplicates t)
-  (setq savehist-file (bono-cache-dir "savehist"))
+  ;; (setq savehist-file (bono-cache-dir "savehist"))
   )
 
 
