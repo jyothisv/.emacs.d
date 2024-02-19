@@ -37,6 +37,9 @@
 (require 'bono-core-utils)
 (message "bono-core-utils initialized in %s" (emacs-init-time))
 
+(require 'bono-core-dynamic-utils)
+(message "bono-core-dynamic-utils initialized in %s" (emacs-init-time))
+
 (require 'bono-core-packages)
 (message "bono-core-packages initialized in %s" (emacs-init-time))
 

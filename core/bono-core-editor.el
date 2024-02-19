@@ -54,8 +54,7 @@
   :diminish
   :config (which-key-mode))
 
-;; Clean the whitespace before saving
-(add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'before-save-hook 'bono-whitespace-cleanup)
 
 ;; Some keybindings
 ;; help function is already bound to F1. So C-h can be assigned to backspace.
