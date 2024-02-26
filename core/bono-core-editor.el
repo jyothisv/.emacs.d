@@ -133,7 +133,4 @@
 ;; Do not act on region when the mark is inactive
 (setq mark-even-if-inactive nil)
 
-;; imenu
-(global-set-key (kbd "M-i") 'imenu)
-
 (provide 'bono-core-editor)
