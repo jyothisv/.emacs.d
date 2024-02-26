@@ -17,7 +17,7 @@
 ;; Enable the tab-bar
 (tab-bar-mode)
 
-;; (setq tab-bar-new-tab-choice 'window)
+(setq tab-bar-new-tab-choice "*scratch*")
 (setq tab-bar-new-tab-to 'rightmost)
 
 ;; C-c <left>/<right> for cycling through tab bars
