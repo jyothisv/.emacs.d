@@ -34,4 +34,7 @@
 
 (require 'bono-processes)
 
+;; Direnv
+(require 'bono-direnv)
+
 (provide 'bono-core-modes)
