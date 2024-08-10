@@ -8,4 +8,7 @@
   (web-mode . prettier-mode)
   )
 
+
+(use-package svelte-mode)
+
 (provide 'bono-js)
