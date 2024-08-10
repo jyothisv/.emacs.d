@@ -32,6 +32,9 @@
 (require 'bono-rust)
 (require 'bono-yaml)
 
+;; AI
+(require 'bono-ai)
+
 (require 'bono-processes)
 
 ;; Direnv
