@@ -11,6 +11,8 @@
                    (abbreviate-file-name (buffer-file-name))
                  "%b")))) ; "   %n (%i)"))
 
+(setq default-frame-alist '((undecorated . t)))
+
 
 (blink-cursor-mode -1)                  ; Do not blink the cursor
 
